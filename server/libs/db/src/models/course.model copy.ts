@@ -16,7 +16,4 @@ export class Course {
   @prop()
   cover: string
 
-  @ApiProperty({description: '课程资源'})
-  @prop({ ref: () => 'Episode' })
-  episodes: Ref<Episode>[]
 }

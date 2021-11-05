@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+// import axios from 'axios'
 import './plugins/element'
 import './plugins/avue'
 import router from './router'
@@ -9,12 +10,6 @@ import router from './router'
 // // 注册 vue-ele-form
 // Vue.use(EleForm)
 
-import axios from 'axios'
-
-
-Vue.prototype.$http = axios.create({
-  baseURL: 'http://localhost:3000'
-})
 
 Vue.config.productionTip = false
 

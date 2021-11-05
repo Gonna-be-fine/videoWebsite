@@ -11,7 +11,14 @@ const models = TypegooseModule.forFeature([User, Course, Episode])
 @Global()
 @Module({
   imports: [
-    TypegooseModule.forRoot('mongodb://localhost:27017/video-pro'),
+    TypegooseModule.forRootAsync({
+      useFactory(){
+        return {
+          uri: process.env.DB
+        }
+      }
+    }),
+    // TypegooseModule.forRoot('mongodb://localhost:27017/video-pro'),
     models
   ],
   providers: [DbService],
